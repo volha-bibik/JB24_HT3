@@ -35,7 +35,6 @@ public class Line01 {
         int number;
 
         number = askNumber();
-
         findDigit(number);
     }
 }

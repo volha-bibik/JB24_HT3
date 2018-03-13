@@ -4,12 +4,11 @@ import java.util.Scanner;
 
 public class FunctionTask3 {
 
-    private static double xValue;
 
-    private static double askForData (String askedData) {
+    private static double askForData () {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter" +  askedData + ": ");
+        System.out.println("Enter X value: ");
         while(!sc.hasNextDouble()) {
             sc.next();
         }
@@ -20,8 +19,10 @@ public class FunctionTask3 {
     private static double calculateFunction (double x) {
         if (x <= -3) {
             return 9;
-        } else {
+        } else if (x > 3){
             return 1/(Math.pow(x, 2) + 1);
+        } else {
+            return Double.NaN;
         }
     }
 
@@ -30,10 +31,9 @@ public class FunctionTask3 {
     }
 
     public static void main(String[] args) {
+        double xValue, result;
 
-        xValue = askForData("X value");
-        double result;
-
+        xValue = askForData();
         result = calculateFunction(xValue);
         printResult(xValue, result);
     }

@@ -11,7 +11,7 @@ public class ColDays {
     private static int askNumber(String enterData) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите " + enterData + ": ");
-        while(!sc.hasNextInt()) {
+        if(!sc.hasNextInt()) {
             sc.next();
         }
         return sc.nextInt();

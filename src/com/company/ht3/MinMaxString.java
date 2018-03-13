@@ -3,12 +3,13 @@ package com.company.ht3;
 import java.util.Scanner;
 
 public class MinMaxString {
-    private static String max = "", min = "", str = "";
+    private static String max = "", min = "";
 
     private static void printResult(String data, String maxMin) {
         System.out.println(maxMin + " string = " + data + " length=" + data.length());
     }
     private static void askString(int i) {
+        String str;
         Scanner sc = new Scanner(System.in);
         System.out.print("> ");
         if (sc.hasNextLine()) {
